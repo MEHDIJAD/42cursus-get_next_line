@@ -6,7 +6,7 @@
 /*   By: eel-garo <eel-garo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/01 15:11:58 by eel-garo          #+#    #+#             */
-/*   Updated: 2024/12/03 17:27:51 by eel-garo         ###   ########.fr       */
+/*   Updated: 2025/06/27 20:11:00 by eel-garo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ char	*ft_get_line(char **str_buf, int fd)
 	return (line);
 }
 
-char	*ft_read_join(char **str_buff, int fd)
+char	*read_and_add(char **str_buff, int fd)
 {
 	int		bytes_read;
 	char	*buf;
@@ -93,7 +93,7 @@ char	*get_next_line(int fd)
 
 	if (fd < 0 || fd >= OPEN_MAX || BUFFER_SIZE <= 0)
 		return (NULL);
-	read_join = ft_read_join(str_buf, fd);
+	read_join = read_and_add(str_buf, fd);
 	if (!read_join || !str_buf[fd] || !*str_buf[fd])
 		return (free(str_buf[fd]), str_buf[fd] = NULL, NULL);
 	line = ft_get_line(str_buf, fd);

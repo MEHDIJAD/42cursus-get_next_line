@@ -6,7 +6,7 @@
 /*   By: eel-garo <eel-garo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/01 14:21:19 by eel-garo          #+#    #+#             */
-/*   Updated: 2024/12/03 10:18:55 by eel-garo         ###   ########.fr       */
+/*   Updated: 2025/06/27 20:11:00 by eel-garo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 # include <unistd.h>
 
 char	*get_next_line(int fd);
-char	*ft_read_join(char **str_buff, int fd);
+char	*read_and_add(char **str_buff, int fd);
 char	*ft_get_line(char **str_buf);
 int		ft_len_to_newline(char *str_buf);
 int		ft_found_newline(char *str_buf);
