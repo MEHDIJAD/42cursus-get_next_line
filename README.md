@@ -22,20 +22,21 @@ get clone https://github.com/MEHDIJAD/42cursus-get_next_line.git
 ```
 
 #### 2. Navigate to the project directory:
+
 ```bash
 cd 42Cursus-get_next_line
 ```
 #### 3. Compile with your project:
+
 ```bash
 gcc -Wall -Wextra -Werror -D BUFFER_SIZE=42 your_program.c get_next_line.c get_next_line_utils.c
 ```
 
 ----
 
-## 💡 Implementation Details
 
+## 🤖 Code Flow 
 
-## Code Flow 
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#e3f2fd', 'secondaryColor': '#e8f5e9'}}}%%
 flowchart TD
@@ -75,8 +76,25 @@ flowchart TD
     end
     style Errors fill:#ffcdd2,stroke:#c62828
 
-    style C,J fill:#f8d7da,stroke:#721c24,stroke-width:2px,color:#721c24
-    style P fill:#d4edda,stroke:#155724,stroke-width:2px,color:#155724
+    style C fill:#ffebee,stroke:#c62828
+    style J fill:#ffebee,stroke:#c62828
+    style P fill:#e8f5e9,stroke:#2e7d32
 ```
 
+## ⚙️ Under the Hood: How get_next_line Works with the OS
+
+### Who Does What
+
+1. **🐧 The Operating System**
+
+- Tracks the file offset (a cursor) for each file descriptor. It knows 	where the next physical read from the disk should happen. This is updated automatically every time you call read().
+
+2. **🧑‍💻 My get_next_line**
+
+- Tracks the leftover buffer (static char *str_buf). It stores data that has been read from the OS but not yet returned to the user as a complete line.
+
+## 👨‍💻 Author
+
+- 42 Intra: [eel-garo](https://profile.intra.42.fr/users/eel-garo)
+- GitHub: [MEHDIJAD](https://github.com/MAHDIJAD)
 
