@@ -35,6 +35,20 @@ gcc -Wall -Wextra -Werror -D BUFFER_SIZE=42 your_program.c get_next_line.c get_n
 
 ----
 
+## 🪾 Project Structure
+
+```bash
+.
+├── README.md
+├── get_next_line.c
+├── get_next_line.h
+├── get_next_line_bonus.c
+├── get_next_line_bonus.h
+├── get_next_line_utils.c
+└── get_next_line_utils_bonus.c
+
+1 directory, 7 files
+```
 
 ## 🤖 Code Flow 
 
@@ -80,21 +94,6 @@ flowchart TD
     style C fill:#ffebee,stroke:#c62828
     style J fill:#ffebee,stroke:#c62828
     style P fill:#e8f5e9,stroke:#2e7d32
-```
-
-## 🌳 Project Structure
-
-```bash
-.
-├── README.md
-├── get_next_line.c
-├── get_next_line.h
-├── get_next_line_bonus.c
-├── get_next_line_bonus.h
-├── get_next_line_utils.c
-└── get_next_line_utils_bonus.c
-
-1 directory, 7 files
 ```
 
 ## 📋 Usage Examples
